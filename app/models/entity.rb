@@ -8,6 +8,6 @@ class Entity < ApplicationRecord
   validates :amount, numericality: { greater_than: 0 }
 
   def init
-    self.amount ||= 0
+    self.amount ||= 1
   end
 end
