@@ -1,0 +1,10 @@
+<h1 class="cover-heading">Flooz</h1>
+<em class="lead text-indigo"><small>Manage better your money !</small></em>
+<p class="lead">
+  <% if user_signed_in?%>
+    <%= link_to "My transactions", root_path,  class:"btn btn-sm btn-secondary"%>
+  <%else%>
+    <%= link_to "Sign in", new_user_session_path, class:"btn btn-sm btn-secondary"%>
+    <%= link_to "Sign up", new_user_registration_path, class:"btn btn-sm btn-info" %>
+  <% end %>
+</p>

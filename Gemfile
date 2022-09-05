@@ -10,7 +10,8 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'stimulus-rails'
 gem 'turbo-rails'
-
+gem 'devise'
+gem "cancan"
 gem 'jbuilder'
 
 gem 'bcrypt', '~> 3.1.7'
