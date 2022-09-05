@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-    has_many :groups, dependent: :destroy
-    has_many :entities, through: :groups
+  has_many :groups, dependent: :destroy
+  has_many :entities, through: :groups
 
-    validates :name, presence: true
+  validates :name, presence: true
 end
