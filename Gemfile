@@ -5,14 +5,14 @@ ruby '3.1.2'
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
 gem 'sprockets-rails'
 
+gem 'cancan'
+gem 'devise'
 gem 'importmap-rails'
+gem 'jbuilder'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'stimulus-rails'
 gem 'turbo-rails'
-gem 'devise'
-gem "cancan"
-gem 'jbuilder'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', require: false
