@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   before(:each) do
-    @user = User.create!(name: 'Test User')
+    @user = User.create!(name: 'Test User', email: 'yolo@dev.co', password: '123456', password_confirmation: '123456')
     @group = Group.new(name: 'Group 1', user_id: @user.id)
   end
   describe 'validations' do

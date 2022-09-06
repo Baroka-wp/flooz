@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Entity, type: :model do
   before(:each) do
-    @user = User.create!(name: 'Test User')
+    @user = User.create!(name: 'Test User', email: 'yolo@dev.co', password: '123456', password_confirmation: '123456')
     @group = Group.create!(name: 'Group 1', user_id: @user.id)
     @entity = Entity.new(name: 'Entity 1', amount: 10, user_id: @user.id, group_id: @group.id)
   end

@@ -1,8 +1,6 @@
 class Group < ApplicationRecord
   mount_uploader :icon, IconUploader
 
-  before_save :default_icon
-
   belongs_to :user
   has_many :entities, dependent: :destroy
 
@@ -20,13 +18,5 @@ class Group < ApplicationRecord
       investment: 'investment.png',
       default: 'default.png'
     }
-  end
-
-  private
-
-  def default_icon
-    if icon.nil?
-      self.icon = 'default.png'
-    end
   end
 end

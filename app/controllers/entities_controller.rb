@@ -1,5 +1,4 @@
 class EntitiesController < ApplicationController
-  
   def index
     @group = Group.find(params[:group_id])
     @entities = current_user.entities
