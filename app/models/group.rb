@@ -1,4 +1,6 @@
 class Group < ApplicationRecord
+  mount_uploader :icon, IconUploader
+
   before_save :default_icon
 
   belongs_to :user
@@ -22,6 +24,8 @@ class Group < ApplicationRecord
 
   private
   def default_icon
-    self.icon = 'https://www.flaticon.com/svg/static/icons/svg/3523/3523063.svg' if icon.nil?
+    if self.icon.nil?
+      self.icon = 'https://www.flaticon.com/svg/static/icons/svg/3523/3523063.svg' 
+    end
   end
 end

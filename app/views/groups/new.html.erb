@@ -1,11 +1,11 @@
 <h2>Select defaut group </h2>
 <% @icons.map do |name, icon| %>
-    <div><%= image_tag icon%><%= name %><%=button_to "Add", default_group_path(name), method: :post, class:"btn btn-sm btn-success" %> </div>
+    <div><%= image_tag icon%><%= name %><%=button_to "Add", default_group_path(name, icon), method: :post, class:"btn btn-sm btn-success" %> </div>
 <% end%>
 
 <h2>Or add custom group </h2>
 <%= form_with model:[current_user, current_user.groups.build] , local: true do |form|%>
-    <%= form.text_field :icon, placeholder:"groupe icone"%>
+    <%= form.file_field :icon %>
     <%= form.label :name %>
     <%= form.text_field :name, required: true%>
     <%= form.submit %>

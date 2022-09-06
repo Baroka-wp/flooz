@@ -1,4 +1,5 @@
 class EntitiesController < ApplicationController
+  load_and_authorize_resource
   def index
     @group = Group.find(params[:group_id])
     @entities = current_user.entities

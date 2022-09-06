@@ -37,8 +37,9 @@ class GroupsController < ApplicationController
 
   def default_group
     name = params[:name]
-    icon = name + '.png'
-    @group = current_user.groups.new(name: name, icon: icon )
+    icon = params[:icon]+ params[:format]
+    # mount image with carrierwave
+    @group = current_user.groups.new(name: name, icon: icon)
     if @group.save
       redirect_to user_groups_path(current_user.id)
     else
@@ -54,6 +55,6 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, :icon)
+    params.require(:group).permit(:name, :icon, :icon_cache)
   end
 end
