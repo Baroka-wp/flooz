@@ -16,7 +16,8 @@ This Ruby on Rails is about building a mobile web application where user can man
 
 ## [Go live](https://my-flooz-app.herokuapp.com/)
 
-## DOCUMENTATION [loom](#)
+## DOCUMENTATION 
+### [loom link](https://www.loom.com/share/a307dbc974be4e2287bb8b0699543852)
 
 ## Getting Started
 
