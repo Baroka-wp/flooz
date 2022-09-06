@@ -14,7 +14,9 @@ This Ruby on Rails is about building a mobile web application where user can man
 - [x] Linter: [Rubocop](https://rubocop.org/)
 - [x] VS Code
 
-## [Go live]
+## [Go live](https://my-flooz-app.herokuapp.com/)
+
+## DOCUMENTATION [loom](#)
 
 ## Getting Started
 
