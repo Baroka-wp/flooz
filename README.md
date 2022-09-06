@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Rails Recipe app
+# Rails transaction app
 
 This Ruby on Rails is about building a mobile web application where user can manage your budget: user has a list of transactions associated with a category, so that he can see how much money he spent and on what. The application that allows the user to:
 - register and log in, so that the data is private to them.
@@ -14,7 +14,9 @@ This Ruby on Rails is about building a mobile web application where user can man
 - [x] Linter: [Rubocop](https://rubocop.org/)
 - [x] VS Code
 
-## [Go live]
+## [Go live](https://my-flooz-app.herokuapp.com/)
+
+## DOCUMENTATION [loom](#)
 
 ## Getting Started
 
