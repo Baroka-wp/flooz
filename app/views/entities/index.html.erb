@@ -1,2 +1,12 @@
-<h1>Entities#index</h1>
-<p>Find me in app/views/entities/index.html.erb</p>
+<h5><%= link_to "<=| back", user_groups_path(current_user)%></h5>
+<h6>Total spend for <%= @group.name %> : $<%= @group.entities.sum(:amount) %></h6>
+<div>
+    <% @entities.each do |e|%>
+    <div class="col-12 d-flex gap-2">
+        <p><%= e.name %></p>
+        <p>$<%= e.amount %></p>
+        <%= button_to "delete", user_group_path(current_user, e), method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+    <% end %>
+</div>
+<%= link_to 'New transaction', new_user_group_entity_path %>

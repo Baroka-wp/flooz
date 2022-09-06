@@ -1,2 +1,14 @@
 <h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+
+<div>
+    <% @groups.each do |g|%>
+    <div class="col-12 d-flex gap-2">
+        <p>Total spend for <%= g.name %> : $<%= g.entities.sum(:amount) %></p>
+        <%=image_tag g.icon %>
+        <p><%= link_to g.name, user_group_entities_path(current_user, g)%></p>
+        <%= link_to "edit", edit_user_group_path(current_user, g) %>
+        <%= button_to "delete", user_group_path(current_user, g), method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+    <% end %>
+</div>
+<%= link_to 'New Group', new_user_group_path %>

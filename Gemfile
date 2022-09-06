@@ -19,6 +19,8 @@ gem 'bootsnap', require: false
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'image_processing', '~> 1.2'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'database_cleaner'
