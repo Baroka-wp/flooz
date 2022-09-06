@@ -1,0 +1,6 @@
+<%= form_for [current_user, @group], local: true do |form|%>
+    <%= form.text_field :icon, placeholder:"groupe icone"%>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.submit %>
+<% end %>

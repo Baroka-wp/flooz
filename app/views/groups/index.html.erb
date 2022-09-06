@@ -1,0 +1,16 @@
+<%= render 'sheared/nav_bar'%>
+<div>
+    <% @groups.each do |g|%>
+    <div class="col-12 d-flex gap-2">
+        <p>Total spend for <%= g.name %> : $<%= g.entities.sum(:amount) %></p>
+        <%if g.icon.url.nil?%>
+            <p><%= image_tag default_group_icon(g.name)%></p>
+        <% else %>
+            <%=image_tag g.icon.url %>
+        <% end %>
+        <p><%= link_to g.name, user_group_entities_path(current_user, g)%></p>
+        <%= button_to "delete", user_group_path(current_user, g), method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+    <% end %>
+</div>
+<%= link_to 'New Group', new_user_group_path %>
