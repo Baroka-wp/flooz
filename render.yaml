@@ -1,18 +1,18 @@
 databases:
-  - name: floozOnRails
-    databaseName: floozOnRails
-    user: floozOnRails
+  - name: flooz_app
+    databaseName: flooz_app
+    user: flooz_app
 
 services:
   - type: web
-    name: floozOnRails
+    name: flooz_app
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: floozOnRails
+          name: flooz_app
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
