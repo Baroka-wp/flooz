@@ -14,16 +14,16 @@ class EntitiesController < ApplicationController
     @entity = @group.entities.build(entity_params)
     @entity.user = current_user
     if @entity.save
-      flash[:notice] = "Entity created successfully"
+      flash[:notice] = 'Entity created successfully'
       redirect_to user_group_entities_path(current_user.id, @group.id)
     else
-      flash[:alert] = "Entity not created"
+      flash[:alert] = 'Entity not created'
       render :new
     end
   end
 
-
   private
+
   def entity_params
     params.require(:entity).permit(:name, :amount)
   end

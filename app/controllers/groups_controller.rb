@@ -1,5 +1,4 @@
 class GroupsController < ApplicationController
-
   def index
     @groups = current_user.groups.includes(:entities).all
   end
@@ -16,6 +15,7 @@ class GroupsController < ApplicationController
       render :new
     end
   end
+
   def show
     @group = Group.find(params[:id])
     @entities = @group.entities
@@ -28,7 +28,7 @@ class GroupsController < ApplicationController
   def update
     @group = Group.find(params[:id])
     if @group.update(group_params)
-      flash[:notice] = "Group updated successfully"
+      flash[:notice] = 'Group updated successfully'
       redirect_to user_groups_path(current_user.id)
     else
       render :edit
@@ -37,9 +37,9 @@ class GroupsController < ApplicationController
 
   def default_group
     name = params[:name]
-    icon = params[:icon]+ params[:format]
+    icon = params[:icon] + params[:format]
     # mount image with carrierwave
-    @group = current_user.groups.new(name: name, icon: icon)
+    @group = current_user.groups.new(name:, icon:)
     if @group.save
       redirect_to user_groups_path(current_user.id)
     else
@@ -54,6 +54,7 @@ class GroupsController < ApplicationController
   end
 
   private
+
   def group_params
     params.require(:group).permit(:name, :icon, :icon_cache)
   end
