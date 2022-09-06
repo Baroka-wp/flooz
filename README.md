@@ -35,10 +35,10 @@ In the terminal, go to your file directory and run this command.
 
 > Clone the repository
 ```
-$ git clone https://github.com/Baroka-wp/recipe-app
+$ git clone https://github.com/Baroka-wp/flooz
 ```
 ```
-$ cd recipe-app
+$ cd flooz
 ```
 > Install Gemfile
 
