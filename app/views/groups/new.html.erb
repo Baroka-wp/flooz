@@ -1,12 +1,24 @@
-<h2>Select defaut group </h2>
-<% @icons.map do |name, icon| %>
-    <div><%= image_tag icon%><%= name %><%=button_to "Add", default_group_path(name, icon), method: :post, class:"btn btn-sm btn-success" %> </div>
-<% end%>
-
-<h2>Or add custom group </h2>
-<%= form_with model:[current_user, current_user.groups.build] , local: true do |form|%>
-    <%= form.file_field :icon %>
-    <%= form.label :name %>
-    <%= form.text_field :name, required: true%>
-    <%= form.submit %>
-<% end %>
+<%= render 'group_nav'%>
+<div class="container">
+    <div class="separation"></div>
+    <h5 class="text-center text-muted mb-2"> Add custom group </h5>
+    <div class="group_form">
+        <%= form_with model:[current_user, current_user.groups.build] , local: true do |form|%>
+            <%= form.text_field :name, required: true, placeholder:"Group name"%>
+            <%= form.file_field :icon, required: true%>
+            <%= form.submit class:"btn btn-sm btn-success"  %>
+        <% end %>
+    </div>
+    <hr />
+    <div class="separation"></div>
+    <h5 class="text-center text-muted"> Or select defaut group </h5>
+    <div class="container d-flex mt-3 p-3 default_group">
+        <% @icons.map do |name, icon| %>
+            <div class="col-sm-2 col-sm-3 padding:10px;">
+                <%= image_tag icon, style:"width: 100px;"%>
+                <%= name %>
+                <%=button_to "Add", default_group_path(name, icon), method: :post, class:"btn btn-sm btn-success" %> 
+            </div>
+        <% end%>
+    </div>
+</div>

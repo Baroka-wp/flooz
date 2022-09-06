@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before :each do
-    @user = User.new(name: 'Tom')
+    @user = User.create!(name: 'Test User', email: 'yolo@dev.co', password: '123456', password_confirmation: '123456')
   end
   context 'validations' do
     it 'is valid with valid attributes' do

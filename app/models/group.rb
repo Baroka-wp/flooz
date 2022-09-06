@@ -1,8 +1,6 @@
 class Group < ApplicationRecord
   mount_uploader :icon, IconUploader
 
-  before_save :default_icon
-
   belongs_to :user
   has_many :entities, dependent: :destroy
 
@@ -17,13 +15,8 @@ class Group < ApplicationRecord
       healthcare: 'healthcare.png',
       housing: 'housing.png',
       internet: 'internet.png',
-      investment: 'investment.png'
+      investment: 'investment.png',
+      default: 'default.png'
     }
-  end
-
-  private
-
-  def default_icon
-    self.icon = 'https://www.flaticon.com/svg/static/icons/svg/3523/3523063.svg' if icon.nil?
   end
 end

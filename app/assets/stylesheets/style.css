@@ -10,6 +10,20 @@
 
 body {
   background-color: var(--text-color-light);
+  font-family: var(--font-light);
+}
+
+p {
+  font-family: var(--font-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-bold);
 }
 
 :root {
@@ -84,4 +98,19 @@ form {
 
 .devise-form .link {
   padding: 10px;
+}
+
+.default_group {
+  width: auto;
+  overflow-x: scroll;
+}
+
+.separation {
+  height: 10vh;
+}
+
+.group_form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
