@@ -1,16 +1,22 @@
 <%= render 'sheared/nav_bar'%>
-<div>
+<div class="container d-flex flex-column justify-content-center align-items-center">
     <% @groups.each do |g|%>
-    <div class="col-12 d-flex gap-2">
-        <p>Total spend for <%= g.name %> : $<%= g.entities.sum(:amount) %></p>
-        <%if g.icon.url.nil?%>
-            <p><%= image_tag default_group_icon(g.name)%></p>
-        <% else %>
-            <%=image_tag g.icon.url %>
-        <% end %>
-        <p><%= link_to g.name, user_group_entities_path(current_user, g)%></p>
-        <%= button_to "delete", user_group_path(current_user, g), method: :delete, data: { confirm: "Are you sure?" } %>
+    <div class="card d-flex flex-column justify-content-center align-items-center m-3 pt-3" style="width: 18rem;">
+        <div>
+            <span class="material-symbols-outlined img">
+                <%if g.icon.url.nil?%>
+                    <%= image_tag default_group_icon(g.name)%>
+                <% else %>
+                    <%=image_tag g.icon.url, class:"img-fluid", style:"width: 520px;" %>
+                <% end %>
+            </span>
+        </div>
+
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <%= link_to g.name.upcase, user_group_entities_path(current_user, g), class: "btn btn-success" %>
+            <p class="card-text text-muted">Total spend : $<%= g.entities.sum(:amount) %></p>
+        </div>
     </div>
-    <% end %>
+<% end %>
+    <%= link_to 'New Group', new_user_group_path, class: "btn btn-success mb-5" %>
 </div>
-<%= link_to 'New Group', new_user_group_path %>

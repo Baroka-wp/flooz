@@ -17,13 +17,16 @@ class Group < ApplicationRecord
       healthcare: 'healthcare.png',
       housing: 'housing.png',
       internet: 'internet.png',
-      investment: 'investment.png'
+      investment: 'investment.png',
+      default: 'default.png'
     }
   end
 
   private
 
   def default_icon
-    self.icon = 'https://www.flaticon.com/svg/static/icons/svg/3523/3523063.svg' if icon.nil?
+    if icon.nil?
+      self.icon = 'default.png'
+    end
   end
 end
