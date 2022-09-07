@@ -1,0 +1,8 @@
+<h1>Entities#new</h1>
+<%= form_with model:[current_user, @group, @group.entities.build] , local: true do |form|%>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+    <%= form.submit %>
+<% end %>

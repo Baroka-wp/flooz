@@ -1,0 +1,22 @@
+<div class="pos-f-t">
+  <% if user_signed_in? %>
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-ligth p-4">
+        <h4 class="text-dark">Hi <%= current_user.name %></h4>
+      </div>
+    </div>
+  <% else %>
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-ligth p-4">
+        <h4 class="text-dark">Flooz</h4>
+        <span class="text-muted">Manage better your money !</span>
+      </div>
+    </div>
+  <% end %>
+  <nav class="navbar navbar-dark bg-blue">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <%= button_to "LOGOUT", destroy_user_session_path, method: :delete, class:"btn-bold" %>
+  </nav>
+</div>

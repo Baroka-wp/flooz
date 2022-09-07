@@ -1,0 +1,50 @@
+<%= render 'groups/group_nav'%>
+<h5 class="text-center mt-4">Total spend for <%= @group.name %> : $<%= @group.entities.sum(:amount) %></h5>
+<div class="container">
+  <table class="table table-striped", style="text-align: center;">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @group.entities.empty?%>
+            <p class="text-center text-primary"> No transaction yet ! </p>
+      <% else %>
+      
+        <% @group.entities.each do |t| %>
+            <tr>
+            <td><%= t.created_at.strftime("%d-%b-%Y") %></td>
+            <td><%= t.name %></td>
+            <td>$<%= t.amount %></td>
+            <td>        
+                <%= button_to "delete", user_group_entity_path(current_user, t.group, t ), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-success mb-5" %>
+            </td>
+            </tr>
+        <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<button type="button" class="btn action-btn" data-toggle="modal" data-target="#exampleModalCenter">New transaction</button>
+<div class="btn-border"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add transaction for <%=@group.name%></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render "entities/form"%>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Rails Recipe app
+# Rails transaction app
 
 This Ruby on Rails is about building a mobile web application where user can manage your budget: user has a list of transactions associated with a category, so that he can see how much money he spent and on what. The application that allows the user to:
 - register and log in, so that the data is private to them.
@@ -14,7 +14,15 @@ This Ruby on Rails is about building a mobile web application where user can man
 - [x] Linter: [Rubocop](https://rubocop.org/)
 - [x] VS Code
 
-## [Go live]
+## [Go live](https://my-flooz-app.herokuapp.com/)
+
+## DOCUMENTATION 
+### [loom link](https://www.loom.com/share/a307dbc974be4e2287bb8b0699543852)
+
+![Capture d’écran 2022-09-07 à 18 11 09](https://user-images.githubusercontent.com/67879818/188938987-40158caa-80a7-4b76-b584-a995901eb056.png)
+![Capture d’écran 2022-09-07 à 18 11 42](https://user-images.githubusercontent.com/67879818/188939010-9076bb9f-6e7d-40d3-b3c6-711616515a66.png)
+![Capture d’écran 2022-09-07 à 18 11 56](https://user-images.githubusercontent.com/67879818/188939044-bca3b4ca-5882-44dc-a1be-a54faaf2720a.png)
+
 
 ## Getting Started
 
@@ -32,10 +40,10 @@ In the terminal, go to your file directory and run this command.
 
 > Clone the repository
 ```
-$ git clone https://github.com/Baroka-wp/recipe-app
+$ git clone https://github.com/Baroka-wp/flooz
 ```
 ```
-$ cd recipe-app
+$ cd flooz
 ```
 > Install Gemfile
 
@@ -92,9 +100,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- [Microverse](https://www.microverse.org/)
-- Coding Partners
-- Code Reviewers
+- Microverse
+- [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance the author of the [original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 
 ## 📝 License
 
