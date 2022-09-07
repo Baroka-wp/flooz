@@ -1,4 +1,6 @@
 class Entity < ApplicationRecord
+  # order by created_at DESC
+  default_scope { order(created_at: :desc) }
   after_initialize :init
 
   belongs_to :user
