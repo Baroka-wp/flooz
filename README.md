@@ -19,6 +19,11 @@ This Ruby on Rails is about building a mobile web application where user can man
 ## DOCUMENTATION 
 ### [loom link](https://www.loom.com/share/a307dbc974be4e2287bb8b0699543852)
 
+![Capture d’écran 2022-09-07 à 18 11 09](https://user-images.githubusercontent.com/67879818/188938987-40158caa-80a7-4b76-b584-a995901eb056.png)
+![Capture d’écran 2022-09-07 à 18 11 42](https://user-images.githubusercontent.com/67879818/188939010-9076bb9f-6e7d-40d3-b3c6-711616515a66.png)
+![Capture d’écran 2022-09-07 à 18 11 56](https://user-images.githubusercontent.com/67879818/188939044-bca3b4ca-5882-44dc-a1be-a54faaf2720a.png)
+
+
 ## Getting Started
 
 You can get a local copy up and running following these simple steps.
