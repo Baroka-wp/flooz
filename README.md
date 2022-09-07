@@ -95,9 +95,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- [Microverse](https://www.microverse.org/)
-- Coding Partners
-- Code Reviewers
+- Microverse
+- [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance the author of the [original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 
 ## 📝 License
 
